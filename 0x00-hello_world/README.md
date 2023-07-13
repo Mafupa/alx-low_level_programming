@@ -7,3 +7,6 @@ file 1-compiler compiles a C file but does not link
 # Task 2
 file 2-assembler generates the assembly code of a C code and save it in an output file
 
+# Task 3
+file 3-name compiles a C file and creates an executable named cisfun
+
