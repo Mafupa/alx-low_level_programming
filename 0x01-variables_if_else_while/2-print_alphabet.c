@@ -14,4 +14,5 @@ int main(void)
 		putchar(cur);
 		putchar('\n');
 	}
+	return (0);
 }
