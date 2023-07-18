@@ -6,9 +6,10 @@
  */
 void print_times_table(int n)
 {
+	int s, t, p;
+
 	if (n < 0 || n > 15)
 		return;
-	int s, t, p;
 
 	for (s = 0; s < n; s++)
 	{
