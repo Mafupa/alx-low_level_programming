@@ -10,14 +10,14 @@ void print_times_table(int n)
 		return;
 	int s, t, p;
 
-	for (s=0; s < n; s++)
+	for (s = 0; s < n; s++)
 	{
 		_putchar('0');
-		for (t=0; t < n; t++)
+		for (t = 0; t < n; t++)
 		{
 			_putchar(',');
 			_putchar(' ');
-			
+
 			p = s * t;
 			if (p <= 99)
 				_putchar(' ');
