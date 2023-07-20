@@ -20,6 +20,6 @@ int main(void)
 		}
 		d = d + 1;
 	}
-	printf("%ld", bg);
+	printf("%ld\n", bg);
 	return (0);
 }
