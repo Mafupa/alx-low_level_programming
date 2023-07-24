@@ -9,7 +9,7 @@ void puts_half(char *str)
 
 	while (str[l])
 		l++;
-	p = l / 2;
+	p = (l + 1) / 2;
 
 	for (; p < l; p++)
 		printf("%c", str[p]);
