@@ -6,9 +6,11 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, num = 0, sign = 1;
+	unsigned int num = 0;
+	int i = 0, sign = 1;
 
-	while (s[i]) {
+	while (s[i])
+	{
 		if (s[i] == '-')
 			sign *= -1;
 		else if (s[i] >= '0' && s[i] <= '9')
