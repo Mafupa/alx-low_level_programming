@@ -13,8 +13,8 @@ int main(void)
 	char *s;
 
 	srand(time(NULL));
-	s = malloc(sizeof(char) * 16);
-	for (; i < 16; i++)
+	s = malloc(sizeof(char) * 100);
+	for (; i < 100; i++)
 		s[i] = (rand() % 127) + '0';
 	printf("%s", s);
 	free(s);
