@@ -3,7 +3,7 @@
  * @a: the string
  * Return: Pointer to the string
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 	int i = 0;
 
@@ -11,6 +11,7 @@ char *string_toupper(char *)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 			s[i] -= 32;
+		i++;
 	}
 	return (s);
 }
