@@ -16,6 +16,7 @@ char *leet(char *s)
 			if (s[i] == ltr[j])
 				s[i] = eq[j];
 		}
+		i++;
 	}
 	return (s);
 }
