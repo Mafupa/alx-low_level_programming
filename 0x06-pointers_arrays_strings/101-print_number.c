@@ -6,9 +6,18 @@
  */
 void print_number(int n)
 {
-	int d = 10, l = 0;
+	int n1, d = 10, l = 0;
 	char *s;
 
+	if (n < 0)
+	{
+		n1 = -n;
+		_putchar('-');
+	}
+	else
+	{
+		n1 = n;
+	}
 	while (n > 0)
 	{
 		s[l] = ((n % d) + '0');
