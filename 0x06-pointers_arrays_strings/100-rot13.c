@@ -11,10 +11,13 @@ char *rot13(char *s)
 
 	while (s[i])
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; j < 53; j++)
 		{
 			if (s[i] == ltr[j])
+			{
 				s[i] = eq[j];
+				break;
+			}
 		}
 		i++;
 	}
