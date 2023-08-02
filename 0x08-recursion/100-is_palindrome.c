@@ -26,8 +26,6 @@ int is_palindrome(char *s)
 {
 	char *e = s;
 
-	while (*e)
-		e++;
-	e--;
+	e += _strlen_recursion(s);
 	return (helper(s, e));
 }
