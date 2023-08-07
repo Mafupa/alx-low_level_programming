@@ -12,9 +12,9 @@ char *argstostr(int ac, char **av)
 	char *str;
 	int i, j, w = 0, size = 0;
 
-	if (av == NULL)
+	if (ac == 0 || av == NULL)
 	{
-		return("Failed\n");
+		return(NULL);
 	}
 	for (i = 0; i < ac; i++)
 	{
