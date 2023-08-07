@@ -12,12 +12,16 @@ char *argstostr(int ac, char **av)
 	char *str;
 	int i, j, w = 0, size = 0;
 
+	if (av == NULL)
+	{
+		return("Failed\n");
+	}
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 			size++;
 	}
-	str = malloc(sizeof(char) * size + ac);
+	str = malloc(sizeof(char) * size + ac + 1);
 	if (str == NULL)
 		return (NULL);
 
