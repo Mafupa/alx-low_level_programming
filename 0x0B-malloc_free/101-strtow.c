@@ -21,7 +21,7 @@ char **strtow(char *str)
 	{
 		if (flag == 1)
 		{
-			for (wsize = 0; str[i+wsize] != ' '; wsize++)
+			for (wsize = 0; str[i + wsize] != ' '; wsize++)
 				continue;
 			array[j] = (char *)malloc(sizeof(char) * wsize + 1);
 			flag = 0;
