@@ -39,10 +39,11 @@ char **strtow(char *str)
 	wrd_count = word_count(str);
 	if (wrd_count == 0)
 		return (NULL);
-	array = (char **)malloc(sizeof(char *) * wrd_count);
+	array = (char **)malloc(sizeof(char *) * (wrd_count + 1));
 	if (array == NULL)
 		return (NULL);
-	for (i = 0; i <= c_count; i++){
+	for (i = 0; i <= c_count; i++)
+	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
 			if (flag == 1)
