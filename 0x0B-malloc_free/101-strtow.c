@@ -2,46 +2,68 @@
 #include <stddef.h>
 
 /**
+ * word_count - count words in a string
+ * @str: the string
+ * Return: the number of words in str
+ */
+int word_count(char *str)
+{
+	int count = 0, i = 0, flag = 0;
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] == ' ')
+		{
+			flag = 0;
+		}
+		else if (flag == 0)
+		{
+			count++;
+			flag = 1;
+		}
+	}
+	return (count);
+}
+/**
  * strtow - splits string into words
  * @str: the string
  * Return: Pointer to array of words
  */
 char **strtow(char *str)
 {
-	int i, j = 0, c = 0, array_size = 1, flag = 1, wsize = 0;
+	int i, j, wrd_count = 0, flag = 0, wrd_start = 0, w = 0;
 	char **array;
 
+	wrd_count = word_count(str);
+	if (wrd_count == 0)
+		return (NULL);
+	array = (char **)malloc(sizeof(char *) * wrd_count);
+	if (array == NULL)
+		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] == ' ')
-			array_size++;
-	}
-	array = (char **)malloc(sizeof(char) * array_size);
-	for (i = 0; str[i]; i++)
-	{
-		if (flag == 1)
 		{
-			for (wsize = 0; str[i + wsize] != ' '; wsize++)
-				continue;
-			array[j] = (char *)malloc(sizeof(char) * wsize + 1);
+			if (flag == 1)
+			{
+				array[w] = (char *)malloc(sizeof(char) * (i - wrd_start) + 1);
+				if (array[w] == NULL)
+				{
+					/* Dealocate */
+				}
+				for (j = 0; j < (i - wrd_start); j++)
+					array[w][j] = str[wrd_start + j];
+				array[w][j] = '\0';
+				w++;
+			}
 			flag = 0;
 		}
-		if (str[i] == ' ')
+		else if (flag == 0)
 		{
-			while (str[i + 1] == ' ')
-				i++;
-			if (c >= 0)
-			{
-				array[j][c] = '\0';
-				j++;
-				c = 0;
-				flag = 1;
-				continue;
-			}
+			wrd_start = i;
+			flag = 1;
 		}
-		array[j][c] = str[i];
-		c++;
 	}
+	array[w] = NULL;
 	return (array);
-
 }
