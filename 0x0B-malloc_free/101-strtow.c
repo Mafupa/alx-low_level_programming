@@ -31,18 +31,19 @@ int word_count(char *str)
  */
 char **strtow(char *str)
 {
-	int i, j, wrd_count = 0, flag = 0, wrd_start = 0, w = 0;
+	int i = 0, j, c_count = 0, wrd_count = 0, flag = 0, wrd_start = 0, w = 0;
 	char **array;
 
+	for (i = 0; str[i]; i++)
+		c_count++;
 	wrd_count = word_count(str);
 	if (wrd_count == 0)
 		return (NULL);
 	array = (char **)malloc(sizeof(char *) * wrd_count);
 	if (array == NULL)
 		return (NULL);
-	for (i = 0; str[i]; i++)
-	{
-		if (str[i] == ' ')
+	for (i = 0; i <= c_count; i++){
+		if (str[i] == ' ' || str[i] == '\0')
 		{
 			if (flag == 1)
 			{
