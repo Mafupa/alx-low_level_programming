@@ -1,3 +1,6 @@
+#include <stdlib.c>
+#include <stddef.c>
+
 /**
  * malloc_checked - allocates memory using malloc
  * @b: size in memory
