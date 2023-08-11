@@ -37,6 +37,7 @@ void print_number(int n)
 /**
  * check_digits - check is a string is made of digits
  * @s: the string
+ * Return: 0 if s only has digits, 1 otherwise
  */
 int check_digits(char *s)
 {
@@ -101,5 +102,5 @@ int main(int argc, char **argv)
 	print_number(result);
 	_putchar('\n');
 	return (0);
-}		
+}
 
