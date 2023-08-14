@@ -36,10 +36,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	n_dog->age = age;
-	for (i = 0; i <= s_name; i++)
+	for (i = 0; i < s_name; i++)
 		n_dog->name[i] = name[i];
 	n_dog->name[i] = '\0';
-	for (j = 0; j <= s_owner; j++)
+	for (j = 0; j < s_owner; j++)
 		n_dog->owner[j] = owner[j];
 	n_dog->owner[j] = '\0';
 	return (n_dog);
