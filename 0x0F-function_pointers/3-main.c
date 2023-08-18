@@ -16,11 +16,16 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (98);
 	}
+	if ((argv[2] == "/" || argv[2] == "%") && atoi(argv[3]))
+	{
+		printf("Error\n");
+		return (100);
+	}
 	eval = get_op_func(argv[2]);
 	if (!eval)
 	{
 		printf("Error\n");
-		return (98);
+		return (99);
 	}
 	ans = eval(atoi(argv[1]), atoi(argv[3]));
 	printf("%i\n", ans);
