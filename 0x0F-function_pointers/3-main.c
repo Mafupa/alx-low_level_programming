@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (98);
 	}
-	if ((argv[2] == "/" || argv[2] == "%") && atoi(argv[3]))
+	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		return (100);
