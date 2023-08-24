@@ -2,6 +2,9 @@
 
 void myConstructor() __attribute__((constructor));
 
+/**
+ * myConstructor - executed before main
+ */
 void myConstructor()
 {
 	printf("You're beat! and yet, you must allow,\n");
