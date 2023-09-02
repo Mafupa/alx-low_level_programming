@@ -7,14 +7,15 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, c = 1, tot = 0;
+	unsigned int c = 1, tot = 0;
+	int i = 0;
 
 	if (!b)
 		return (0);
 	while (b[i])
 		i++;
 	i--;
-	while(b[i])
+	while (b[i])
 	{
 		if (b[i] == '1')
 			tot += c;
