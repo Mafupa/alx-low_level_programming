@@ -8,7 +8,7 @@
  */
 void exit_with_error(const char *message, int exit_code, char *fd)
 {
-	dprintf(STDERR_FILENO, "Error: %s %s\n", message, fd);
+	dprintf(STDERR_FILENO, "%s%s\n", message, fd);
 	exit(exit_code);
 }
 
