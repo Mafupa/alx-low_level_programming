@@ -9,9 +9,15 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int idx;
+	hash_node_t *node;
 
+	if (!ht || !key)
+		return (NULL);
 	idx = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[idx])
-		return (ht->array[idx]->value);
+	node = ht->array[idx];
+	while (node && strcmp(node->key, key))
+		node = node->next;
+	if (node)
+		return (node->value);
 	return (NULL);
 }
