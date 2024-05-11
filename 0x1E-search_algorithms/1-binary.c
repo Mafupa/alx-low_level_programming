@@ -8,7 +8,6 @@
  * @value: value to search
  * Return: index of value, -1 if not found
  */
-
 int binary_search(int *array, size_t size, int value)
 {
 	size_t i, l, r;
@@ -17,7 +16,7 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 	for (l = 0, r = size - 1; r >= l;)
 	{
-		printf("Search in array: ");
+		printf("Searching in array: ");
 		for (i = l; i < r; i++)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[i]);
