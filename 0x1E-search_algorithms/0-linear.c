@@ -1,17 +1,20 @@
 
 /**
- * linear_searc
+ * linear_search - search for a value in an array
+ *
  * @array: array
  * @size: size of array
  * @value: value searched
- * Returns: index of value, -1 if array is NULL or value not in array
+ * Return: index of value, -1 if array is NULL or value not in array
  */
 int linear_search(int *array, size_t size, int value){
+	size_t i;
+
 	if(!array)
-		return -1;
-	for(size_t i = 0; i < size; i++){
+		return (-1);
+	for(i = 0; i < size; i++){
 		if(array[i] == value)
-			return i;
+			return (i);
 	}
-	return -1;
+	return (-1);
 }
